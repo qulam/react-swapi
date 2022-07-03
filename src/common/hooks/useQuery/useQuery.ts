@@ -4,6 +4,8 @@ interface IUseQuery {
   query: (queryParams?: object) => Promise<any>
   skip?: boolean
   queryParams?: object
+  onSuccess?: (data: any) => void // you can use this life cycle methods to get data and set to your store such as Redux
+  onError?: (data: any) => void // you can use this life cycle methods to get network error
 }
 
 interface IState {
@@ -12,7 +14,13 @@ interface IState {
   data: any
 }
 
-const useQuery = ({ query, skip, queryParams }: IUseQuery) => {
+const useQuery = ({
+  query,
+  skip,
+  queryParams,
+  onError,
+  onSuccess,
+}: IUseQuery) => {
   const [state, setState] = useState<IState>({
     error: null,
     isLoading: false,
@@ -28,9 +36,11 @@ const useQuery = ({ query, skip, queryParams }: IUseQuery) => {
       updateState({ isLoading: true })
       query(queryParams)
         .then((data: any) => {
+          if (onSuccess) onSuccess(data)
           updateState({ data })
         })
         .catch((error) => {
+          if (onError) onError(error)
           updateState({ error })
         })
         .finally(() => {

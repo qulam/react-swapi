@@ -11,3 +11,16 @@
 .link {
     text-decoration: none !important;
 }
+
+.link h6 {
+    margin-left: 15px;
+    font-size: 18px;
+    color: black;
+}
+
+.shortcuts {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-left: auto;
+}
