@@ -6,7 +6,7 @@ import { RenderIf } from 'src/ui/components'
 import { View } from 'src/ui/views/Characters/ui/components'
 import { fetchCharacter } from 'src/ui/views/Characters/common/api'
 
-import CharacterDetailBlock from '../../blocks'
+import { CharacterDetailBlock } from '../../blocks'
 
 import styles from './Body.module.css'
 

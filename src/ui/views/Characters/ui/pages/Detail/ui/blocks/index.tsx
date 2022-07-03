@@ -1,3 +1,1 @@
-import CharacterDetailBlock from './CharacterDetailBlock'
-
-export default CharacterDetailBlock
+export { default as CharacterDetailBlock } from './CharacterDetailBlock'
