@@ -1,0 +1,11 @@
+.demoView {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 75vh;
+    margin-top: 30px;
+    padding: 30px;
+    border-radius: 0.875rem;
+    background: #FFF;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
