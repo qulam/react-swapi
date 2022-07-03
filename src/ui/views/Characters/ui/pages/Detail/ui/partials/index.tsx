@@ -1,0 +1,1 @@
+export { default as DetailBody } from './Body'

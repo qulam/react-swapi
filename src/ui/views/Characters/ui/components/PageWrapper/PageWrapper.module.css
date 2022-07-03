@@ -1,0 +1,10 @@
+.box {
+    width: 100%;
+    padding: 15px;
+}
+
+.paper {
+    min-height: 76vh;
+    background: #ffffff;
+    padding: 15px;
+}
